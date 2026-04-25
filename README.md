@@ -65,3 +65,42 @@ function doPost(e) {
   }
   return ContentService.createTextOutput(JSON.stringify({data: ""})).setMimeType(ContentService.MimeType.JSON);
 }
+
+
+3. النشر (Deployment)
+اضغط على زر Deploy ثم New Deployment.
+
+اختر النوع (Select type) ليكون Web App.
+
+Execute as: اختر "Me".
+
+Who has access: اختر "Anyone" (هذا الخيار ضروري جداً).
+
+اضغط Deploy وانسخ الرابط (Web App URL) الناتج.
+
+💻 إعداد جانب العميل (Python)
+المتطلبات:
+قم بتثبيت المكتبات اللازمة عبر الـ Terminal:
+
+Bash
+pip install customtkinter requests
+ملف الإعدادات (config.py):
+قم بإنشاء ملف باسم config.py في نفس مجلد البرنامج وضع فيه الرابط الذي نسخته:
+
+Python
+URL = "ضع_رابط_جوجل_هنا"
+DEFAULT_GROUP = "BAYLAK_ROOM"
+DEFAULT_IP = "127.0.0.1"
+DEFAULT_PORT = "80"
+تشغيل البرنامج:
+قم بتشغيل ملف البايثون الرئيسي. اختر HOST للجهاز المستهدف و JOINER لجهاز التحكم.
+
+🛡️ نصائح للأداء الأقصى
+الرابط: لا تشارك رابط الـ Web App مع أحد، فهو مفتاح الوصول لبياناتك.
+
+السرعة: إذا واجهت تأخيراً، تأكد من أن قيمة الـ timeout في البايثون دائماً أعلى من مجموع وقت الـ sleep في جوجل.
+
+المتعدد: يمكنك فتح أكثر من جلسة (Sessions) في نفس الوقت بفضل نظام الـ SID التلقائي.
+
+👨‍💻 التطوير بواسطة
+BAYLAK - نحو حلول برمجية أسرع وأكثر استقراراً.
