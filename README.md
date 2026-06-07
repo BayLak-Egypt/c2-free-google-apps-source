@@ -1,6 +1,6 @@
 ![](Screenshot%20from%202026-04-25%2021-56-59.png)
 
-# 🚀 BayLak C2 Bridge 
+# 🚀 Google apps C2 Bridge 
 نظام **C2 Bridge** احترافي مبني بلغة بايثون، يعتمد على **Google Apps Script** كخادم وسيط (Relay Server). هذا النظام مصمم لنقل بيانات الـ Sockets والاتصالات بذكاء وسرعة فائقة حتى في ظروف الشبكة المتقلبة.
 
 ---
